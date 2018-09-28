@@ -1,5 +1,5 @@
 #-*-coding:utf-8-*-
-#queue.pyx
+#Squeue.pyx
 #distutils: sources = c-algorithms/src/queue.c
 #distutils: include_dirs = c-algorithms/src/
 cimport cqueue
