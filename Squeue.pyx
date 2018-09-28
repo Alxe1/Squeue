@@ -7,13 +7,13 @@ cimport cqueue
 cdef class Squeue:
 	cdef cqueue.Queue *_c_queue
 	
-	#初始化
+	#init the class
 	def __cinit__(self):
 		self._c_queue = cqueue.queue_new()
 		if self._c_queue is NULL:
 			raise MemoryError()
 	
-	#释放内存
+	#free memory
 	def __dealloc__(self):
 		if self._c_queue is not NULL:
 			cqueue.queue_free(self._c_queue)
